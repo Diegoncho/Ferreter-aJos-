@@ -11,6 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+/*----------------------------------------*/
+ /* Formulario Login de Aplicacion */
+Route::get('/', function(){
+    return view('auth.login');
 });
+
+
+/* Funciones del Formulario */
+
+/*---------------------------------------*/
