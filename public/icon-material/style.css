@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icon-material';
-  src:  url('icon-material.eot?lesimb');
-  src:  url('icon-material.eot?lesimb#iefix') format('embedded-opentype'),
-    url('icon-material.ttf?lesimb') format('truetype'),
-    url('icon-material.woff?lesimb') format('woff'),
-    url('icon-material.svg?lesimb#icon-material') format('svg');
+  src:  url('fonts/icon-material.eot?lesimb');
+  src:  url('fonts/icon-material.eot?lesimb#iefix') format('embedded-opentype'),
+    url('fonts/icon-material.ttf?lesimb') format('truetype'),
+    url('fonts/icon-material.woff?lesimb') format('woff'),
+    url('fonts/icon-material.svg?lesimb#icon-material') format('svg');
   font-weight: normal;
   font-style: normal;
 }
