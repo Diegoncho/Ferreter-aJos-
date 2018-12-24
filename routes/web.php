@@ -13,11 +13,19 @@
 
 /*----------------------------------------*/
  /* Formulario Login de Aplicacion */
-Route::get('/', function(){
-    return view('auth.login');
-});
+ Route::get('/', 'Auth\LoginController@showLoginForm');
+ Route::get('login', 'Auth\LoginController@showLoginForm');
+ Route::get('logout', 'Auth\LoginController@logout');
+ 
+ /* Funciones del Formulario */
+ Route::post('login', 'Auth\LoginController@login')->name('login');
+ 
+ 
+ Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+ /*---------------------------------------*/
 
-
-/* Funciones del Formulario */
 
 /*---------------------------------------*/
+/* Menu de Aplicacion */
+Route::get('menu', 'MenuController@index')->name('menu');
+/*---------------------------------------*/ 
