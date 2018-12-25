@@ -29,3 +29,12 @@
 /* Menu de Aplicacion */
 Route::get('menu', 'MenuController@index')->name('menu');
 /*---------------------------------------*/ 
+
+
+//CRUD DE MARCAS//
+/*---------------------------------------*/
+/* Listar Marcas */
+Route::get('/marca', function(){
+    return view('marca');
+});
+Route::get('marca', 'MarcaController@index')->name('marca');
