@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 use App\Marcas;
 
@@ -12,8 +13,10 @@ class MarcaController extends Controller
         $this->middleware('auth');
     }
 
-    public function index(){
+    public function index(Request $request){
 
-        return view('CrudMarcas.marca');
+        $Marcas = Marcas::name($request->get('name'))->orderby('id','ASC')->paginate(7);
+
+        return view('CrudMarcas.marca' , compact('Marcas'));
     }
 }
