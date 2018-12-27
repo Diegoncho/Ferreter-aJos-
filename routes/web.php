@@ -38,3 +38,26 @@ Route::get('/marca', function(){
     return view('marca');
 });
 Route::get('marca', 'MarcaController@index')->name('marca');
+
+/* Formulario de Registrar Marca */
+Route::get('/marcaAdd', function(){
+    return view('marcaAdd');
+});
+Route::get('marcaAdd', 'MarcaController@create')->name('marcaAdd');
+
+/* Formulario de Editar Marca */
+Route::get('/marcaEdit/{id}', function($id){
+    return view('marcaEdit');
+});
+Route::get('/marcaEdit/{id}', 'MarcaController@edit')->name('marcaEdit');
+
+
+/* Agregar Marca */
+Route::post('/marcaAdd', 'MarcaController@post');
+
+/* Editar Marca */
+Route::put('/marcaEdit/{id}', 'MarcaController@put');
+
+/* Eliminar Marca */
+Route::delete('/marca/{id}', 'MarcaController@delete');
+/*---------------------------------------*/
