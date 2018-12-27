@@ -4,9 +4,9 @@
     Menu
 @endsection
 
-@section('content')
-
 @include('layouts.navbar')
+
+@section('content')
 
 <link rel="stylesheet" href="{{ asset('css/menu.css') }}">
 

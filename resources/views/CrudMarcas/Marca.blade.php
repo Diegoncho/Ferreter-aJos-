@@ -4,9 +4,9 @@
     Marcas
 @endsection
 
-@section('content')
-
 @include('layouts.navbar')
+
+@section('content')
 
     <div class="panel panel-default" style="min-width: 800px">
         <div class="panel-heading"><b>Listado de marcas</b></div>

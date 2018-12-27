@@ -4,6 +4,8 @@
     Editar
 @endsection
 
+@include('layouts.navbar')
+
 @section('content')
 
     <div class="row">
