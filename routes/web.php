@@ -61,3 +61,35 @@ Route::put('/marcaEdit/{id}', 'MarcaController@put');
 /* Eliminar Marca */
 Route::delete('/marca/{id}', 'MarcaController@delete');
 /*---------------------------------------*/
+
+
+//CRUD DE CARGOS//
+/*---------------------------------------*/
+/* Listar Cargos */
+Route::get('/cargo', function(){
+    return view('cargo');
+});
+Route::get('cargo', 'CargoController@index')->name('cargo');
+
+/* Formulario de Registrar Cargo */
+Route::get('/cargoAdd', function(){
+    return view('cargoAdd');
+});
+Route::get('cargoAdd', 'CargoController@create')->name('cargoAdd');
+
+/* Formulario de Editar Cargo */
+Route::get('/cargoEdit/{id}', function($id){
+    return view('cargoEdit');
+});
+Route::get('/cargoEdit/{id}', 'CargoController@edit')->name('cargoEdit');
+
+
+/* Agregar Cargo */
+Route::post('/cargoAdd', 'CargoController@post');
+
+/* Editar Cargo */
+Route::put('/cargoEdit/{id}', 'CargoController@put');
+
+/* Eliminar Cargo */
+Route::delete('/cargo/{id}', 'CargoController@delete');
+/*---------------------------------------*/
