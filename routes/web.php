@@ -93,3 +93,35 @@ Route::put('/cargoEdit/{id}', 'CargoController@put');
 /* Eliminar Cargo */
 Route::delete('/cargo/{id}', 'CargoController@delete');
 /*---------------------------------------*/
+
+
+//CRUD DE CATEGORIAS//
+/*---------------------------------------*/
+/* Listar Categorias */
+Route::get('/categoria', function(){
+    return view('categoria');
+});
+Route::get('categoria', 'CategoriaController@index')->name('categoria');
+
+/* Formulario de Registrar Categoria */
+Route::get('/categoriaAdd', function(){
+    return view('categoriaAdd');
+});
+Route::get('categoriaAdd', 'CategoriaController@create')->name('categoriaAdd');
+
+/* Formulario de Editar Categoria */
+Route::get('/categoriaEdit/{id}', function($id){
+    return view('categoriaEdit');
+});
+Route::get('/categoriaEdit/{id}', 'CategoriaController@edit')->name('categoriaEdit');
+
+
+/* Agregar Categoria */
+Route::post('/categoriaAdd', 'CategoriaController@post');
+
+/* Editar Categoria */
+Route::put('/categoriaEdit/{id}', 'CategoriaController@put');
+
+/* Eliminar Categoria */
+Route::delete('/categoria/{id}', 'CategoriaController@delete');
+/*---------------------------------------*/
