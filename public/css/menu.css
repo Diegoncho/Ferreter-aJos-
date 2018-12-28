@@ -79,15 +79,7 @@
 
 .panel-logout{
 	padding: 15px 0px 0px 0px;
-    width: 180px;
-    background: #fff;
-    border: 1px solid #ccc;
     transition: all 0.3s ease-in-out;
-    box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
-}
-
-.panel-logout p{
-	font-size: 10px;
 }
 
 .panel-logout:hover{
