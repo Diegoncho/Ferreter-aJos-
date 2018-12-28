@@ -40,8 +40,9 @@
                     <button type="submit" class="btn btn-primary" >Buscar <i class="icon-search"></i></button>
                 </form>
 
-
-                <a href="{{ route('cargoAdd') }}" class="btn btn-success" style="margin:7px 0px;"><i class="icon-play_for_work "></i> Nuevo Registro</a>
+                <a href="{{ route('cargoAdd') }}" class="btn btn-success" style="margin:7px 0px;">
+                    <i class="icon-play_for_work "></i> Nuevo Registro
+                </a>
             </div>
 
             <p>Hay <b>{{ $Cargos->total() }}</b> cargos</p>
