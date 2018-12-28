@@ -74,7 +74,6 @@
                     </div>
 
                     <div class="module-title">Cerrar Sesión.</div>
-                    <p>Modo desarrollador personalizado.</p>
 
                     <div class="module-footer"></div>
                 </div>

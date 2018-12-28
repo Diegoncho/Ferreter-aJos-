@@ -20,7 +20,9 @@
             <form action="{{ route('logout') }}" method="POST" id="form_nav" style="margin:0;">
                 {{ csrf_field() }}
         
-                <button type="submit" class="btn-none logout-nav"><i class="icon-power_settings_new"></i> Cerrar Sesión</button>
+                <button type="submit" class="btn-none logout-nav flex align-items-center">
+                    <i class="icon-power_settings_new" style="margin:0px 5px;"></i> Cerrar Sesión
+                </button>
             </form>
 
         </div>
