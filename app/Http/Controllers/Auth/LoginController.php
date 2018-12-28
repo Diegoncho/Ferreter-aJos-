@@ -41,6 +41,8 @@ class LoginController extends Controller
     {
         Auth::logout();
 
+        \Session::flash('message-logout', 'La sesión ha sido finalizada.');
+
         return redirect('/');
     }
 
