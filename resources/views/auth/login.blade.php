@@ -7,13 +7,24 @@
 @section('content')
 <hr>
 @if (session()->has('flash'))
-    <div class="alert alert-info">{{ session('flash') }}</div>
+    <div class="alert alert-info" style="margin-bottom:0;">
+        <i class="icon-tag_faces"></i> {{ session('flash') }}
+    </div>
+@endif
+
+@if (Session::has('message-logout'))
+    <div class="alert alert-danger" style="margin-bottom:0;">
+        <i class="icon-mood_bad"></i> {{ Session::get('message-logout') }}
+    </div>
 @endif
 
 <link rel="stylesheet" href="{{ asset('css/login.css') }}">
 
     <div class="row">
 		<div class="col-md-6 col-md-offset-3">
+
+            <div class="logo-application"></div>
+
 			<div class="panel panel-login">
 
 				<div class="panel-heading">
