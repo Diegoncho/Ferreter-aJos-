@@ -157,3 +157,35 @@ Route::put('/proveedorEdit/{id}', 'ProveedorController@put');
 /* Eliminar Proveedor */
 Route::delete('/proveedor/{id}', 'ProveedorController@delete');
 /*---------------------------------------*/
+
+
+//CRUD DE CLIENTES//
+/*---------------------------------------*/
+/* Listar Clientes */
+Route::get('/cliente', function(){
+    return view('cliente');
+});
+Route::get('cliente', 'ClienteController@index')->name('cliente');
+
+/* Formulario de Registrar Cliente */
+Route::get('/clienteAdd', function(){
+    return view('clienteAdd');
+});
+Route::get('clienteAdd', 'ClienteController@create')->name('clienteAdd');
+
+/* Formulario de Editar Cliente */
+Route::get('/clienteEdit/{id}', function($id){
+    return view('clienteEdit');
+});
+Route::get('/clienteEdit/{id}', 'ClienteController@edit')->name('clienteEdit');
+
+
+/* Agregar Cliente */
+Route::post('/clienteAdd', 'ClienteController@post');
+
+/* Editar Cliente */
+Route::put('/clienteEdit/{id}', 'ClienteController@put');
+
+/* Eliminar Cliente */
+Route::delete('/cliente/{id}', 'ClienteController@delete');
+/*---------------------------------------*/
