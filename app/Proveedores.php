@@ -18,5 +18,6 @@ class Proveedores extends Model
 
             $query->where(\DB::raw("CONCAT(nombre)"), "LIKE", "%$name%");
         }
+        
     }
 }
