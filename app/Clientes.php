@@ -4,19 +4,19 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Cargos extends Model
+class Clientes extends Model
 {
     public $timestaps = false;
 
     protected $fillable = [
-        'id', 'cargo'
+        'id', 'nombres', 'apellidos', 'direccion', 'telefono', 'email'
     ];
 
     public function scopeName($query, $name)
     {
         if (trim($name) != ""){
 
-            $query->where(\DB::raw("CONCAT(cargo)"), "LIKE", "%$name%");
+            $query->where(\DB::raw("CONCAT(nombres, ' ' ,apellidos)"), "LIKE", "%$name%");
         }
         
     }
