@@ -189,3 +189,35 @@ Route::put('/clienteEdit/{id}', 'ClienteController@put');
 /* Eliminar Cliente */
 Route::delete('/cliente/{id}', 'ClienteController@delete');
 /*---------------------------------------*/
+
+
+//CRUD DE EMPLEADOS//
+/*---------------------------------------*/
+/* Listar Empleados */
+Route::get('/empleado', function(){
+    return view('empleado');
+});
+Route::get('empleado', 'EmpleadoController@index')->name('empleado');
+
+/* Formulario de Registrar Empleado */
+Route::get('/empleadoAdd', function(){
+    return view('empleadoAdd');
+});
+Route::get('empleadoAdd', 'EmpleadoController@create')->name('empleadoAdd');
+
+/* Formulario de Editar Empleado */
+Route::get('/empleadoEdit/{id}', function($id){
+    return view('empleadoEdit');
+});
+Route::get('/empleadoEdit/{id}', 'EmpleadoController@edit')->name('empleadoEdit');
+
+
+/* Agregar Empleado */
+Route::post('/empleadoAdd', 'EmpleadoController@post');
+
+/* Editar Empleado */
+Route::put('/empleadoEdit/{id}', 'EmpleadoController@put');
+
+/* Eliminar Empleado */
+Route::delete('/empleado/{id}', 'EmpleadoController@delete');
+/*---------------------------------------*/

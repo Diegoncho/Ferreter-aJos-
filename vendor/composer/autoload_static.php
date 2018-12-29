@@ -437,6 +437,7 @@ class ComposerStaticInit75cd20a6cfd370717514baa8ea9e51b3
     public static $classMap = array (
         'App\\Cargos' => __DIR__ . '/../..' . '/app/Cargos.php',
         'App\\Categorias' => __DIR__ . '/../..' . '/app/Categorias.php',
+        'App\\Clientes' => __DIR__ . '/../..' . '/app/Clientes.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -446,6 +447,7 @@ class ComposerStaticInit75cd20a6cfd370717514baa8ea9e51b3
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\CargoController' => __DIR__ . '/../..' . '/app/Http/Controllers/CargoController.php',
         'App\\Http\\Controllers\\CategoriaController' => __DIR__ . '/../..' . '/app/Http/Controllers/CategoriaController.php',
+        'App\\Http\\Controllers\\ClienteController' => __DIR__ . '/../..' . '/app/Http/Controllers/ClienteController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\MarcaController' => __DIR__ . '/../..' . '/app/Http/Controllers/MarcaController.php',
         'App\\Http\\Controllers\\MenuController' => __DIR__ . '/../..' . '/app/Http/Controllers/MenuController.php',
