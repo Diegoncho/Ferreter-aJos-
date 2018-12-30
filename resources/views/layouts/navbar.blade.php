@@ -4,6 +4,10 @@
 <!-- jquery para Sweetalert -->
 <script src="{{ asset('sweetalert/sweetalert.min.js') }}"></script>
 
+<!-- jquery para Html2canvas y Jspdf -->
+<script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
+<script src="{{ asset('js/html2canvas.js') }}"></script>
+
 
 <div class="menu-application">
 
