@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="{{ asset('fonts/style.css') }}">
 </head>
 <body>
+
+    <div class="navbar-menu">
+        @yield('navbar')
+    </div>
+
     <div class="container">
 
         @yield('content')

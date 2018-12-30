@@ -4,7 +4,9 @@
     Proveedores
 @endsection
 
-@include('layouts.navbar')
+@section('navbar')
+    @include('layouts.navbar')
+@endsection
 
 @section('content')
 
