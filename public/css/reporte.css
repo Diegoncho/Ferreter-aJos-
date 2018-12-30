@@ -1,0 +1,55 @@
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+.module-reporte{
+    font-size: 13px;
+    background: #fff;
+    width: 650px;
+    height: 800px;
+    font-family: arial;
+    color: #333;
+}
+
+@media (min-width: 992px){
+    .col-md-offset-plus {
+        margin-left: 19.666667%;
+    }
+}
+
+.header-reporte{
+    width: 100%;
+    height: 15px;
+    background: #333;
+}
+
+.reporte-container{
+    padding: 15px;
+}
+
+.reporte-container h2{
+    font-weight: bold;
+    margin-bottom: 22px;
+}
+
+.reporte-container hr{
+    margin-top: 10px;
+}
+
+.reporte-title{
+    font-size: 16px;
+}
+
+.data-group{
+    margin: 5px 0px;
+    width: 100%;
+}
+
+.data-group label{
+    background: #333;
+    color: #fff;
+    padding: 0px 20px 0px 10px;
+}
