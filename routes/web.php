@@ -237,6 +237,12 @@ Route::get('/productoAdd', function(){
 });
 Route::get('productoAdd', 'ProductoController@create')->name('productoAdd');
 
+/* Vista de Reporte Producto */
+Route::get('/productoView/{id}', function($id){
+    return view('productoView');
+});
+Route::get('/productoView/{id}', 'ProductoController@view')->name('productoView');
+
 /* Formulario de Editar Producto */
 Route::get('/productoEdit/{id}', function($id){
     return view('productoEdit');
