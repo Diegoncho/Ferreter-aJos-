@@ -73,7 +73,7 @@
                     <td>{{ $row->cantidad }}</td>
                     <td>${{ $row->precio_costo }}</td>
                     <td>
-                        <a href="#" class="btn btn-info"><span class="icon-visibility"></span></a>
+                        <a href="{{ route('productoView', $row->id) }}" class="btn btn-info"><span class="icon-visibility"></span></a>
                         <a href="{{ route('productoEdit', $row->id) }}" class="btn btn-warning">Editar</a>
                         <a href="#" class="btn btn-danger">Eliminar</a>
                     </td>
