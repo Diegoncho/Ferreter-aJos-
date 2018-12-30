@@ -34,6 +34,14 @@ class ProductoController extends Controller
         return view('CrudProductos.productoAdd', compact('Marcas','Categorias','Proveedores'));
     }
 
+    public function view($id){
+
+        $Productos = Productos::findOrFail($id);
+        $VistaProductos = VistaProductos::findOrFail($id);
+
+        return view('CrudProductos.productoView', compact('Productos','VistaProductos'));
+    }
+
     public function edit($id){
 
         $Productos = Productos::findOrFail($id);
