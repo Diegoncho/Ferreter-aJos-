@@ -71,7 +71,7 @@
                     <td>{{ $row->apellidos }}</td>
                     <td>{{ $row->telefono }}</td>
                     <td>
-                        <a href="#" class="btn btn-info"><span class="icon-visibility"></span></a>
+                        <a href="{{ route('empleadoView', $row->id) }}"  class="btn btn-info"><span class="icon-visibility"></span></a>
                         <a href="{{ route('empleadoEdit', $row->id) }}" class="btn btn-warning">Editar</a>
                         <a href="#" class="btn btn-danger">Eliminar</a>
                     </td>
