@@ -53,3 +53,12 @@
     color: #fff;
     padding: 0px 20px 0px 10px;
 }
+
+.print-reporte{
+    margin: 10px;
+}
+
+.print-reporte .pdf{
+    background: #ff0000;
+    color: #fff;
+}
