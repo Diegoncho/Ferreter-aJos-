@@ -29,6 +29,14 @@ class EmpleadoController extends Controller
         return view('CrudEmpleados.empleadoAdd', compact('Cargos'));
     }
 
+    public function view($id){
+
+        $Empleados = Empleados::findOrFail($id);
+        $VistaEmpleados = VistaEmpleados::findOrFail($id);
+
+        return view('CrudEmpleados.empleadoView', compact('Empleados','VistaEmpleados'));
+    }
+
     public function edit($id){
 
         $Empleados = Empleados::findOrFail($id);
