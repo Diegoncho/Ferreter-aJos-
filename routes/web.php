@@ -173,6 +173,12 @@ Route::get('/clienteAdd', function(){
 });
 Route::get('clienteAdd', 'ClienteController@create')->name('clienteAdd');
 
+/* Vista de Reporte Cliente */
+Route::get('/clienteView/{id}', function($id){
+    return view('clienteView');
+});
+Route::get('/clienteView/{id}', 'ClienteController@view')->name('clienteView');
+
 /* Formulario de Editar Cliente */
 Route::get('/clienteEdit/{id}', function($id){
     return view('clienteEdit');
