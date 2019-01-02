@@ -19,7 +19,7 @@
         <div class="menu-icon"></div>
 
         <div class="options flex align-items-center">
-            <a href="{{ route('menu') }}"><i class="icon-home"></i></a>
+            <a href="{{ route('menu') }}" class="flex"><i class="icon-home"></i></a>
 
             <a href="">Buscar</a>
 
