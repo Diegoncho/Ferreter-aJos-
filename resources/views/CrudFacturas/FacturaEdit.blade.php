@@ -13,21 +13,12 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Editar Factura: {{ $VistaFacturas->codigo_factura }}</div>
+                <div class="panel-heading">Editar Factura: {{ $VistaFacturas->id }}</div>
 
                     <div class="panel-body">
                         <form class="form-horizontal" action="{{ route('facturaEdit', $VistaFacturas->id) }}" method="POST">
                         {{ csrf_field() }}
                         {{ method_field('PUT') }}
-
-                        <div class="form-group {{ $errors->has('codigo_factura') ? 'has-error' : ''}}">
-                            <label for="codigo_factura" class="col-md-3">Codigo Factura</label>
-
-                            <div class="col-md-12">
-                                <input id="codigo_factura" type="text" class="form-control" name="codigo_factura" value="{{ $VistaFacturas->codigo_factura }}">
-                                {!! $errors->first('codigo_factura','<span class="help-block">:message</span>') !!}
-                            </div>
-                        </div>
 
                         <div class="form-group {{ $errors->has('fecha') ? 'has-error' : ''}}">
 

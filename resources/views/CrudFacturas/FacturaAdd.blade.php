@@ -19,15 +19,6 @@
                         <form class="form-horizontal" action="{{ route('facturaAdd') }}" method="POST">
                         {{ csrf_field() }}
 
-                        <div class="form-group {{ $errors->has('codigo_factura') ? 'has-error' : ''}}">
-                            <label for="codigo_factura" class="col-md-3">Codigo Factura</label>
-
-                            <div class="col-md-12">
-                                <input id="codigo_factura" type="text" class="form-control" name="codigo_factura" value="{{ old('codigo_factura') }}">
-                                {!! $errors->first('codigo_factura','<span class="help-block">:message</span>') !!}
-                            </div>
-                        </div>
-
                         <div class="form-group {{ $errors->has('fecha') ? 'has-error' : ''}}">
 
                             <label for="fecha" class="col-md-1">Fecha</label>

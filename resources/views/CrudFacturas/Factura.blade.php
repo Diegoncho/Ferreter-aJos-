@@ -37,7 +37,7 @@
             <div class="function-crud flex align-items-center">
                 <form  action="{{ route('factura') }}" class="form-search pull-left" method="GET" role="search">
                     <div class="form-group">
-                        <input type="text" class="form-control" name="name" placeholder="Buscar factura">
+                        <input type="text" class="form-control" name="name" placeholder="Buscar # factura">
                     </div>
                     <button type="submit" class="btn btn-primary" >Buscar <i class="icon-search"></i></button>
                 </form>
@@ -67,7 +67,7 @@
             <tbody>
             @foreach($VistaFacturas as $row)
                 <tr data-id="{{ $row->id }}">
-                    <td>{{ $row->codigo_factura }}</td>
+                    <td>{{ $row->id }}</td>
                     <td>{{ $row->fecha }}</td>
                     <td>{{ $row->producto }}</td>
                     <td>{{ $row->nombres }} {{ $row->apellidos}}</td>
