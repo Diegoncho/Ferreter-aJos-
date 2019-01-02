@@ -14,56 +14,62 @@
 
     <div class="panel-menu">
 
-        <div class="panel-module flexbox">
-            <div class="section-menu flex align-items-center">
-                <div class="section-icon">
-                    <i class="icon-arrow_forward"></i>
+        <a href="{{ route('submenu') }}">
+            <div class="panel-module flexbox">
+                <div class="section-menu flex align-items-center">
+                    <div class="section-icon">
+                        <i class="icon-arrow_forward"></i>
+                    </div>
+
+                    <div class="section-info">
+                        <h4>Buscar un Registro.</h4>
+                        <p>Modo desarrollador personalizado.</p>
+                    </div>
                 </div>
 
-                <div class="section-info">
-                    <h4>Buscar un Registro.</h4>
-                    <p>Modo desarrollador personalizado.</p>
+                <div class="section-icon-2">
+                    <i class="icon-search"></i>
                 </div>
             </div>
+        </a>
 
-            <div class="section-icon-2">
-                <i class="icon-search"></i>
-            </div>
-        </div>
+        <a href="{{ route('submenuAdd') }}">
+            <div class="panel-module flexbox">
+                <div class="section-menu flex align-items-center">
+                    <div class="section-icon">
+                        <i class="icon-arrow_forward"></i>
+                    </div>
 
-        <div class="panel-module flexbox">
-            <div class="section-menu flex align-items-center">
-                <div class="section-icon">
-                    <i class="icon-arrow_forward"></i>
+                    <div class="section-info">
+                        <h4>Insertar un Registro.</h4>
+                        <p>Modo desarrollador personalizado.</p>
+                    </div>
                 </div>
 
-                <div class="section-info">
-                    <h4>Insertar un Registro.</h4>
-                    <p>Modo desarrollador personalizado.</p>
+                <div class="section-icon-2">
+                    <i class="icon-create_new_folder "></i>
                 </div>
             </div>
+        </a>
 
-            <div class="section-icon-2">
-                <i class="icon-create_new_folder "></i>
-            </div>
-        </div>
+        <a href="{{ route('factura') }}">
+            <div class="panel-module flexbox">
+                <div class="section-menu flex align-items-center">
+                    <div class="section-icon">
+                        <i class="icon-arrow_forward"></i>
+                    </div>
 
-        <div class="panel-module flexbox">
-            <div class="section-menu flex align-items-center">
-                <div class="section-icon">
-                    <i class="icon-arrow_forward"></i>
+                    <div class="section-info">
+                        <h4>Generar un Reporte.</h4>
+                        <p>Modo desarrollador personalizado.</p>
+                    </div>
                 </div>
 
-                <div class="section-info">
-                    <h4>Generar un Reporte.</h4>
-                    <p>Modo desarrollador personalizado.</p>
+                <div class="section-icon-2">
+                    <i class="icon-assignment"></i>
                 </div>
             </div>
-
-            <div class="section-icon-2">
-                <i class="icon-assignment"></i>
-            </div>
-        </div>
+        </a>
 
         <form action="{{ route('logout') }}" method="POST" id="form">
             {{ csrf_field() }}
