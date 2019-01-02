@@ -61,7 +61,6 @@ class FacturaController extends Controller
     public function post(Request $request){
 
         $validator = Validator::make($request->all(),[
-            'codigo_factura' => 'required|max:100',
             'fecha' => 'required|date',
             'cliente_id' => 'required',
             'producto_id' => 'required',
@@ -77,7 +76,6 @@ class FacturaController extends Controller
 
             $CabeceraFactura = new CabeceraFactura;
 
-            $CabeceraFactura->codigo_factura = $request->codigo_factura;
             $CabeceraFactura->fecha = $request->fecha;
             $CabeceraFactura->cliente_id = $request->cliente_id;
             
@@ -100,7 +98,6 @@ class FacturaController extends Controller
     public function put(Request $request, $id){
 
         $validator = Validator::make($request->all(),[
-            'codigo_factura' => 'required|max:100',
             'fecha' => 'required|date',
             'cliente_id' => 'required',
             'producto_id' => 'required',
@@ -116,7 +113,6 @@ class FacturaController extends Controller
 
             $CabeceraFactura = CabeceraFactura::findOrFail($id);
 
-            $CabeceraFactura->codigo_factura = $request->codigo_factura;
             $CabeceraFactura->fecha = $request->fecha;
             $CabeceraFactura->cliente_id = $request->cliente_id;
             
@@ -131,7 +127,7 @@ class FacturaController extends Controller
 
             $DetalleFactura->save();
 
-            \Session::flash('message-edit', $CabeceraFactura->codigo_factura.' se actualizo correctamente.');
+            \Session::flash('message-edit', 'Factura '.$CabeceraFactura->id.' se actualizo correctamente.');
 
             return redirect('/factura');
     }
@@ -148,7 +144,7 @@ class FacturaController extends Controller
         $CabeceraFactura->delete();
 
 
-        \Session::flash('message-delete', $CabeceraFactura->codigo_factura.' ha sido eliminado.');
+        \Session::flash('message-delete', 'Factura '.$CabeceraFactura->id.' ha sido eliminado.');
 
         return redirect('/factura');
     }

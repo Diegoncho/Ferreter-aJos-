@@ -9,6 +9,6 @@ class CabeceraFactura extends Model
     public $table = 'cabecerafactura';
     
     protected $fillable = [
-        'id', 'codigo_factura', 'fecha', 'cliente_id' 
+        'id', 'fecha', 'cliente_id' 
     ];
 }

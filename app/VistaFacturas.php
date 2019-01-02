@@ -11,7 +11,7 @@ class VistaFacturas extends Model
     public $table = "vta_facturas";
 
     protected $fillable = [
-        'id', 'codigo_factura', 'fecha', 'producto_id', 'producto', 'marca_id', 'marca',
+        'id', 'fecha', 'producto_id', 'producto', 'marca_id', 'marca',
         'cantidad', 'precio', 'cliente_id', 'nombres', 'apellidos', 'direccion', 'telefono'
     ];
 
@@ -19,7 +19,7 @@ class VistaFacturas extends Model
     {
         if (trim($name) != ""){
 
-            $query->where(\DB::raw("CONCAT(codigo_factura, ' ' ,nombres, ' ' ,apellidos)"), "LIKE", "%$name%");
+            $query->where(\DB::raw("CONCAT(id, ' ' ,nombres, ' ' ,apellidos)"), "LIKE", "%$name%");
         }
 
     }

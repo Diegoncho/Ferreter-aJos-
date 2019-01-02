@@ -15,7 +15,6 @@ class CreateCabecerafacturaTable extends Migration
     {
         Schema::create('cabecerafactura', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('codigo_factura',100);
             $table->string('fecha',255);
             $table->integer('cliente_id')->unsigned();
             $table->timestamps();
