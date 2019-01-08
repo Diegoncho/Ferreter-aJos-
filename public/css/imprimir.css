@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=BenchNine');
+
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body{
+    font-family: 'BenchNine', sans-serif;
+    background:url('../img/background.jpg')
+}
+
+a{
+    color: #3097d1;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #216a94;
+}
+
+.container{
+    width: 555px;
+    background: #fff;
+    border: 1px solid #d3e0e9;
+    border-radius: 3px;
+    margin: auto;
+    padding: 0px 20px 0px 20px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #fff;
+}
+
+h1{
+    font-size: 50px;
+    margin: 15px 0px;
+}
+
+h4{
+    margin: 0;
+}
+
+p{
+    margin: 0;
+}
+
+img{
+    width: 250px;
+}
+
+.table-info{
+    border-bottom: 2px solid #D9534F;
+    border-top: 2px solid #D9534F;
+}
+
+.logo-app{
+    background: url(../img/logo-app.png);
+    background-size: cover;
+    background-position: center;
+    height: 63px;
+}
+
+.table-info td{
+    text-align: center;
+}
