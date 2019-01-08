@@ -73,7 +73,7 @@
                     <td>{{ $row->nombres }} {{ $row->apellidos}}</td>
                     <td>{{ $row->telefono }}</td>
                     <td>
-                        <a href="#" onclick="javascript:AbrirImpresion();" class="btn btn-info"><span class="icon-visibility"></span></a>
+                        <a href="javascript:void(0)" onclick="javascript:AbrirImpresion();" class="btn btn-info"><span class="icon-visibility"></span></a>
                         <a href="{{ route('facturaEdit', $row->id) }}" class="btn btn-warning">Editar</a>
                         <a href="#" class="btn btn-danger">Eliminar</a>
                     </td>
