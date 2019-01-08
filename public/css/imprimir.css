@@ -8,6 +8,17 @@
 
 body{
     font-family: 'BenchNine', sans-serif;
+    background: url('../img/background.jpg');
+}
+
+@media print {
+    a{
+        display: none;
+    }
+
+    body{
+        background: none;
+    }
 }
 
 a{
@@ -46,6 +57,10 @@ h4{
 
 p{
     margin: 0;
+}
+
+strong{
+    font-weight: unset;
 }
 
 img{
