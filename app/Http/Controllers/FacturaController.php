@@ -47,6 +47,16 @@ class FacturaController extends Controller
         return view('CrudFacturas.facturaAdd', compact('Productos','Clientes'));
     }
 
+    public function view($id){
+
+        $CabeceraFactura = CabeceraFactura::findOrFail($id);
+        $DetalleFactura = DetalleFactura::findOrFail($id);
+        $VistaFacturas = VistaFacturas::findOrFail($id);
+
+
+        return view('CrudFacturas.facturaView', compact('CabeceraFactura','DetalleFactura','VistaFacturas'));
+    }
+
     public function edit($id){
 
         $CabeceraFactura = CabeceraFactura::findOrFail($id);
