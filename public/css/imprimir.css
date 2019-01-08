@@ -8,7 +8,6 @@
 
 body{
     font-family: 'BenchNine', sans-serif;
-    background:url('../img/background.jpg')
 }
 
 a{
@@ -58,13 +57,6 @@ img{
     border-left: 2px solid #D9534F;
     border-bottom: 2px solid #D9534F;
     border-top: 2px solid #D9534F;
-}
-
-.logo-app{
-    background: url(../img/logo-app.png);
-    background-size: cover;
-    background-position: center;
-    height: 63px;
 }
 
 .table-info td{
