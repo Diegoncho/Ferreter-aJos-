@@ -144,16 +144,12 @@ class FacturaController extends Controller
 
     public function delete($id){
 
-        
+        $CabeceraFactura = CabeceraFactura::findOrFail($id);
         $DetalleFactura = DetalleFactura::findOrFail($id);
 
-        $DetalleFactura->delete();
-        
-        $CabeceraFactura = CabeceraFactura::findOrFail($id);
-
         $CabeceraFactura->delete();
-
-
+        $DetalleFactura->delete();
+    
         \Session::flash('message-delete', 'Factura '.$CabeceraFactura->id.' ha sido eliminado.');
 
         return redirect('/factura');
