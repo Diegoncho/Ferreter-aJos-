@@ -73,7 +73,7 @@
                     <td>{{ $row->nombres }} {{ $row->apellidos}}</td>
                     <td>{{ $row->telefono }}</td>
                     <td>
-                        <a href="javascript:void(0)" onclick="javascript:AbrirImpresion();" class="btn btn-info"><span class="icon-visibility"></span></a>
+                        <a href="{{ route('facturaView', $row->id) }}" class="btn btn-info"><span class="icon-visibility"></span></a>
                         <a href="{{ route('facturaEdit', $row->id) }}" class="btn btn-warning">Editar</a>
                         <a href="#" class="btn btn-danger">Eliminar</a>
                     </td>
@@ -115,9 +115,5 @@
                 
             });
         });
-
-     function AbrirImpresion() {
-		window.open("{{ route('facturaView', $row->id) }}", 'repoLisTodoEst', 'width=1000, height=700')
-	}
 </script>
 @endsection
