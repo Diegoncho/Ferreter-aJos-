@@ -53,7 +53,6 @@ class FacturaController extends Controller
         $DetalleFactura = DetalleFactura::findOrFail($id);
         $VistaFacturas = VistaFacturas::findOrFail($id);
 
-
         return view('CrudFacturas.facturaView', compact('CabeceraFactura','DetalleFactura','VistaFacturas'));
     }
 
