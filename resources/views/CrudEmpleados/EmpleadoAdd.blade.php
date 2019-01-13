@@ -41,7 +41,7 @@
                             <label for="idcargo" class="col-md-1">Cargo</label>
 
                             <div class="col-md-12">
-                                <select name="cargo_id" id="cargo_id" class="form-control">       
+                                <select name="cargo_id" id="cargo_id" class="form-control selectpicker" data-show-subtext="true" data-live-search="true">       
                                     <option Selected disabled>Seleccione el Cargo</option>
                                     
                                 @foreach($Cargos as $row)

@@ -42,7 +42,7 @@
                             <label for="idmarca" class="col-md-1">Marca</label>
 
                             <div class="col-md-12">
-                                <select name="marca_id" id="marca_id" class="form-control">       
+                                <select name="marca_id" id="marca_id" class="form-control selectpicker" data-show-subtext="true" data-live-search="true">       
                                     <option value="{{ $VistaProductos->marca_id }}">{{ $VistaProductos->marca }}</option>
                                     
                                 @foreach($Marcas as $row)
@@ -57,7 +57,7 @@
                             <label for="idcategoria" class="col-md-1">Categoria</label>
 
                             <div class="col-md-12">
-                                <select name="categoria_id" id="categoria_id" class="form-control">       
+                                <select name="categoria_id" id="categoria_id" class="form-control selectpicker" data-show-subtext="true" data-live-search="true">       
                                     <option value="{{ $VistaProductos->categoria_id }}">{{ $VistaProductos->categoria }}</option>
                                     
                                 @foreach($Categorias as $row)
@@ -81,7 +81,7 @@
                             <label for="idproveedor" class="col-md-1">Proveedor</label>
 
                             <div class="col-md-12">
-                                <select name="proveedor_id" id="proveedor_id" class="form-control">       
+                                <select name="proveedor_id" id="proveedor_id" class="form-control selectpicker" data-show-subtext="true" data-live-search="true">       
                                     <option value="{{ $VistaProductos->proveedor_id }}">{{ $VistaProductos->proveedor }}</option>
                                     
                                 @foreach($Proveedores as $row)
