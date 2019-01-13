@@ -5,6 +5,7 @@
     <title>@yield('title', 'Ferreteria') | Panel de Administración</title>
     <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('fonts/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap-select.min.css') }}">
 </head>
 <body>
 
@@ -35,6 +36,10 @@
 
 <!-- jquery para Masked-Input -->
 <script src="{{ asset('js/jquery.maskedinput.min.js') }}"></script>
+
+<!-- jquery para Select-Complete -->
+<script src="{{ asset('js/bootstrap.js') }}"></script>
+<script src="{{ asset('js/bootstrap-select.js') }}"></script>
 
 
 @yield('scripts')
