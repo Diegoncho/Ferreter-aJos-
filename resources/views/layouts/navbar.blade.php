@@ -1,18 +1,3 @@
-<!-- jquery Principal-->
-<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-
-<!-- jquery para Sweetalert -->
-<script src="{{ asset('sweetalert/sweetalert.min.js') }}"></script>
-
-<!-- jquery para Datepicker -->
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-
-<!-- jquery para Html2canvas y Jspdf -->
-<script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
-<script src="{{ asset('js/html2canvas.js') }}"></script>
-
-
 <div class="menu-application">
 
     <div class="navbar-options flexbox">
@@ -38,6 +23,7 @@
 
 </div>
 
+@section('navbar-script')
 <script type="text/javascript">  
     (function () {
         var form_nav = document.getElementById('form_nav');
@@ -76,3 +62,4 @@
         }
     })();
 </script>
+@endsection
