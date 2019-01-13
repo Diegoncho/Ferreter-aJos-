@@ -33,6 +33,10 @@
 <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
 <script src="{{ asset('js/html2canvas.js') }}"></script>
 
+<!-- jquery para Masked-Input -->
+<script src="{{ asset('js/jquery.maskedinput.min.js') }}"></script>
+
+
 @yield('scripts')
 @yield('navbar-script')
 
