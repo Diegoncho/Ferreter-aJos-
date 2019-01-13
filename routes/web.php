@@ -281,42 +281,32 @@ Route::delete('/producto/{id}', 'ProductoController@delete');
 Route::get('/factura', function(){
     return view('factura');
 });
-Route::get('factura', 'FacturaController@index')->name('factura');
+Route::get('factura', 'ComprobanteController@index')->name('factura');
 
 /* Formulario de Registrar Factura */
 Route::get('/facturaAdd', function(){
     return view('facturaAdd');
 });
-Route::get('facturaAdd', 'FacturaController@create')->name('facturaAdd');
+Route::get('facturaAdd', 'ComprobanteController@create')->name('facturaAdd');
+
+/* Formulario de Detalle Factura */
+Route::get('/facturaDetail/{id}', function($id){
+    return view('facturaDetail');
+});
+Route::get('/facturaDetail/{id}', 'ComprobanteController@detail')->name('facturaDetail');
 
 /* Vista de Reporte Factura */
-Route::get('/facturaView/{id}', function($id){
-    return view('facturaView');
+Route::get('/facturaPdf/{id}', function($id){
+    return view('facturaPdf');
 });
-Route::get('/facturaView/{id}', 'FacturaController@view')->name('facturaView');
-
-/* Formulario de Editar Factura */
-Route::get('/facturaEdit/{id}', function($id){
-    return view('facturaEdit');
-});
-Route::get('/facturaEdit/{id}', 'FacturaController@edit')->name('facturaEdit');
+Route::get('/facturaPdf/{id}', 'ComprobanteController@pdf')->name('facturaPdf');
 
 
 /* Agregar Factura */
-Route::post('/facturaAdd', 'FacturaController@post');
-
-/* Editar Factura */
-Route::put('/facturaEdit/{id}', 'FacturaController@put');
-
-/* Eliminar Factura */
-Route::delete('/factura/{id}', 'FacturaController@delete');
+Route::post('/facturaAdd', 'ComprobanteController@post');
 
 
-/* Datos Dinamicos en FacturaAdd */
-Route::get('/getProducto/{id}', 'FacturaController@getProducto');
-Route::get('/getCliente/{id}', 'FacturaController@getCliente');
-
-/* Datos Dinamicos en FacturaEdit */
-Route::get('/facturaEdit/getProducto/{id}', 'FacturaController@getProducto');
-Route::get('/facturaEdit/getCliente/{id}', 'FacturaController@getCliente');
+/* Datos para EasyAutocomplete */
+Route::get('factura/findClient', 'ComprobanteController@findClient');
+Route::get('factura/findProduct', 'ComprobanteController@findProduct');
 /*---------------------------------------*/

@@ -10,6 +10,8 @@
 
             <a href="{{ route('submenuAdd') }}">Agregar</a>
 
+            <a href="{{ route('factura') }}">Reporte</a>
+
             <form action="{{ route('logout') }}" method="POST" id="form_nav" style="margin:0;">
                 {{ csrf_field() }}
         

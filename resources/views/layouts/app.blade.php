@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="csrf-token" content="<?php echo csrf_token() ?>"/>
     <title>@yield('title', 'Ferreteria') | Panel de Administración</title>
     <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('fonts/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('bower_components/EasyAutocomplete/dist/easy-autocomplete.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap-select.min.css') }}">
 </head>
 <body>
@@ -41,8 +43,23 @@
 <script src="{{ asset('js/bootstrap.js') }}"></script>
 <script src="{{ asset('js/bootstrap-select.js') }}"></script>
 
+<!-- Script para Inicialización -->
+<script src="{{asset('ini.js')}}"></script>
+
+<!-- Script para Riot -->
+<script src="{{ asset('bower_components/riot/riot.min.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/riot@3.7/riot+compiler.min.js"></script>
+
+<!-- Script para EasyAutocomplete -->
+<script src="{{ asset('bower_components/EasyAutocomplete/dist/jquery.easy-autocomplete.min.js') }}"></script>
+
 
 @yield('scripts')
 @yield('navbar-script')
 
+<script type="text/javascript">
+    function baseUrl(url){
+        return '{{ url('') }}/' + url;
+    }
+</script>
 </html>
