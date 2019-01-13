@@ -91,6 +91,7 @@
 
     </div>
 
+@section('scripts')
 <script type="text/javascript">
     (function () {
         var form = document.getElementById('form');
@@ -129,4 +130,6 @@
         }
     })();
 </script>
+@endsection
+
 @endsection

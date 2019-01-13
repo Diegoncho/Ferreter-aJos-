@@ -57,7 +57,7 @@
                         </div>
 
                         <div class="form-group {{ $errors->has('email') ? 'has-error' : ''}}">
-                            <label for="email" class="col-md-1">Correo Electronico</label>
+                            <label for="email" class="col-md-3">Correo Electronico</label>
 
                             <div class="col-md-12">
                                 <input id="email" type="email" class="form-control" name="email" value="{{ $Clientes->email }}">                     
