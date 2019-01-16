@@ -9,7 +9,7 @@ use App\Repositories\ProductoRepository;
 use App\Repositories\ComprobanteRepository;
 
 use App\Comprobantes;
-
+use App\Productos;
 
 class ComprobanteController extends Controller
 {
@@ -60,6 +60,8 @@ class ComprobanteController extends Controller
 
     public function post(Request $request){
 
+        $res = false;
+
         $data = (object)[
             'iva' => $request->input('iva'),
             'subtotal' => $request->input('subtotal'),
@@ -75,11 +77,35 @@ class ComprobanteController extends Controller
                 'precio_unitario' => $d['precio_unitario'],
                 'total' => $d['total']
             ];
+
+            $Productos = Productos::findOrFail($d['id']);
+
+            if($Productos->cantidad > 0){
+                if($d['cantidad'] <= $Productos->cantidad){
+                    $res = true;
+
+                    $Productos->cantidad = $Productos->cantidad - $d['cantidad'];
+                    $Productos->save();  
+                }
+            }
+
+            else{
+                $res = false;
+            }
+               
         }
 
-        \Session::flash('message-add', '¡Registro exitoso!');
-        
-        return $this->_comprobanteRepo->save($data);
+        if($res == true){
+
+            \Session::flash('message-add', '¡Registro exitoso!');
+
+            return $this->_comprobanteRepo->save($data);
+        }
+
+        else{
+            return $this->_comprobanteRepo->save('');
+        }
+
     }
 
     public function findClient(Request $request){
