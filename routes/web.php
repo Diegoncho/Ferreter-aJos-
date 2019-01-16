@@ -275,6 +275,43 @@ Route::delete('/producto/{id}', 'ProductoController@delete');
 /*---------------------------------------*/
 
 
+//CRUD DE COMPRAS//
+/*---------------------------------------*/
+/* Listar Compras */
+Route::get('/compra', function(){
+    return view('compra');
+});
+Route::get('compra', 'CompraController@index')->name('compra');
+
+/* Formulario de Registrar Compra */
+Route::get('/compraAdd', function(){
+    return view('compraAdd');
+});
+Route::get('compraAdd', 'CompraController@create')->name('compraAdd');
+
+/* Formulario de Detalle Compra */
+Route::get('/compraDetail/{id}', function($id){
+    return view('compraDetail');
+});
+Route::get('/compraDetail/{id}', 'CompraController@detail')->name('compraDetail');
+
+/* Vista de Reporte Compra */
+Route::get('/compraPdf/{id}', function($id){
+    return view('compraPdf');
+});
+Route::get('/compraPdf/{id}', 'CompraController@pdf')->name('compraPdf');
+
+
+/* Agregar Compra */
+Route::post('/compraAdd', 'CompraController@post');
+
+
+/* Datos para EasyAutocomplete */
+Route::get('compra/findProveedor', 'CompraController@findProveedor');
+Route::get('compra/findProduct', 'CompraController@findProduct');
+/*---------------------------------------*/
+
+
 //CRUD DE FACTURAS//
 /*---------------------------------------*/
 /* Listar Facturas */

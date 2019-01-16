@@ -71,6 +71,25 @@
             </div>
         </a>
 
+        <a href="{{ route('compra') }}">
+            <div class="panel-module flexbox">
+                <div class="section-menu flex align-items-center">
+                    <div class="section-icon">
+                        <i class="icon-arrow_forward"></i>
+                    </div>
+
+                    <div class="section-info">
+                        <h4>Buscar una Compra.</h4>
+                        <p>Modo desarrollador personalizado.</p>
+                    </div>
+                </div>
+
+                <div class="section-icon-2">
+                    <i class="icon-shopping_cart"></i>
+                </div>
+            </div>
+        </a>
+
         <a href="{{ route('producto') }}">
             <div class="panel-module flexbox">
                 <div class="section-menu flex align-items-center">
