@@ -40,8 +40,8 @@
                         <tr>
                             <th>Producto</th>
                             <th style="width:100px;">Cantidad</th>
-                            <th style="width:100px;">P.U</th>
-                            <th style="width:100px;">P.V</th>
+                            <th style="width:100px;">P.C</th>
+                            <th style="width:100px;">P.V/P.U</th>
                             <th style="width:100px;">Total</th>
                         </tr>
                         </thead>
@@ -58,12 +58,12 @@
                         </tbody>
                         <tfoot>
                         <tr>
-                            <td colspan="4" class="text-right"><b>IVA</b></td>
-                            <td class="text-right">$ {{ number_format($model->iva, 2) }}</td>
-                        </tr>
-                        <tr>
                             <td colspan="4" class="text-right"><b>Sub Total</b></td>
                             <td class="text-right">$ {{ number_format($model->subtotal, 2) }}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="text-right"><b>IVA</b></td>
+                            <td class="text-right">$ {{ number_format($model->iva, 2) }}</td>
                         </tr>
                         <tr>
                             <td colspan="4" class="text-right"><b>Total</b></td>
