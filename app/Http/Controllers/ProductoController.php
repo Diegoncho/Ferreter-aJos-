@@ -63,6 +63,7 @@ class ProductoController extends Controller
             'cantidad' => 'required',
             'proveedor_id' => 'required',
             'precio_costo' => 'required',
+            'precio_venta' => 'required',
         ]);
 
         if ($validator->fails()) {
@@ -80,6 +81,7 @@ class ProductoController extends Controller
             $Productos->cantidad = $request->cantidad;
             $Productos->proveedor_id = $request->proveedor_id;
             $Productos->precio_costo = $request->precio_costo;
+            $Productos->precio_venta = $request->precio_venta;
 
             $Productos->save();
 
@@ -98,6 +100,7 @@ class ProductoController extends Controller
             'cantidad' => 'required',
             'proveedor_id' => 'required',
             'precio_costo' => 'required',
+            'precio_venta' => 'required',
         ]);
 
         if ($validator->fails()) {
@@ -115,6 +118,7 @@ class ProductoController extends Controller
             $Productos->cantidad = $request->cantidad;
             $Productos->proveedor_id = $request->proveedor_id;
             $Productos->precio_costo = $request->precio_costo;
+            $Productos->precio_venta = $request->precio_venta;
 
             $Productos->save();
 
