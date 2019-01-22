@@ -31,7 +31,7 @@
         <div class="col-xs-2">
             <div class="input-group">
                 <span class="input-group-addon" id="basic-addon1">S/.</span>
-                <input id="price_v" class="form-control" type="text" placeholder="Precio_v" value="{precio_venta}" readonly/>
+                <input id="price_v" class="form-control" type="number" min="0.00" step="0.01" placeholder="Precio_v" value="{precio_venta}" />
             </div>
         </div>
         <div class="col-xs-1">
@@ -49,8 +49,8 @@
             <th style="width:40px;"></th>
             <th>Producto</th>
             <th class="text-right">Cantidad</th>
-            <th class="text-right">P.U</th>
-            <th class="text-right">P.V</th>
+            <th class="text-right">P.C</th>
+            <th class="text-right">P.V/P.U</th>
             <th class="text-right">Total</th>
         </tr>
         </thead>
@@ -68,12 +68,12 @@
         </tbody>
         <tfoot>
         <tr>
-            <td colspan="5" class="text-right"><b>IVA</b></td>
-            <td class="text-right">$ {iva.toFixed(2)}</td>
-        </tr>
-        <tr>
             <td colspan="5" class="text-right"><b>Sub Total</b></td>
             <td class="text-right">$ {subtotal.toFixed(2)}</td>
+        </tr>
+        <tr>
+            <td colspan="5" class="text-right"><b>IVA</b></td>
+            <td class="text-right">$ {iva.toFixed(2)}</td>
         </tr>
         <tr>
             <td colspan="5" class="text-right"><b>Total</b></td>
@@ -152,9 +152,12 @@
                 total += e.total;
             });
 
-            self.total = total;
-            self.subtotal = parseFloat(total / 1.18);
-            self.iva = parseFloat(total - self.subtotal);
+            self.subtotal = total;
+
+            self.ivaCal = parseFloat(total / 1.18);
+            self.iva = parseFloat(total - self.ivaCal);
+
+            self.total = parseFloat(total + self.iva);
         }
 
         function __clientAutocomplete(){
