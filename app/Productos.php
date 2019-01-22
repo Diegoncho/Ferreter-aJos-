@@ -10,6 +10,6 @@ class Productos extends Model
 
     protected $fillable = [
         'id', 'nombre', 'descripcion', 'marca_id', 'categoria_id', 'cantidad',
-        'proveedor_id', 'precio_costo'
+        'proveedor_id', 'precio_costo', 'precio_venta'
     ];
 }
