@@ -47,6 +47,7 @@ class ComprobanteRepository
                 $obj->producto_id = $d->producto_id;
                 $obj->cantidad = $d->cantidad;
                 $obj->precio_unitario = $d->precio_unitario;
+                $obj->precio_venta = $d->precio_venta;
                 $obj->total = $d->total;
 
                 $detail[] = $obj;

@@ -12,7 +12,7 @@ class VistaProductos extends Model
 
     protected $fillable = [
         'id', 'nombre', 'descripcion', 'marca_id', 'marca', 'categoria_id', 'categoria',
-        'cantidad', 'proveedor_id', 'proveedor', 'precio_costo'
+        'cantidad', 'proveedor_id', 'proveedor', 'precio_costo', 'precio_venta'
     ];
 
     public function scopeName($query, $name)

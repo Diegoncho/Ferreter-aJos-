@@ -18,6 +18,7 @@ class CreateComprobanteDetalleTable extends Migration
             $table->integer('producto_id')->unsigned();
             $table->integer('cantidad');
             $table->decimal('precio_unitario', 10,2);
+            $table->decimal('precio_venta', 10,2);
             $table->decimal('total', 10,2);
             $table->timestamps();
 

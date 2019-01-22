@@ -22,6 +22,7 @@ class CreateProductosTable extends Migration
             $table->integer('cantidad');
             $table->integer('proveedor_id')->unsigned();
             $table->float('precio_costo');
+            $table->float('precio_venta');
             $table->timestamps();
 
             //Relaciones
