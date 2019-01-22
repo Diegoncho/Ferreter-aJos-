@@ -80,6 +80,14 @@
                             </div>
                         </div>
 
+                        <div class="data-group">
+                            <label for="precio_venta">Precio Venta**</label>
+
+                            <div class="reporte-info">
+                                <p>${{ $VistaProductos->precio_venta }}</p>
+                            </div>
+                        </div>
+
                         <hr>
 
                         <div class="logo-application"></div>

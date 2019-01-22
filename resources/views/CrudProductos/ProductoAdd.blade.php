@@ -99,6 +99,15 @@
                                 {!! $errors->first('precio_costo','<span class="help-block">:message</span>') !!}
                             </div>
                         </div>
+
+                         <div class="form-group {{ $errors->has('precio_venta') ? 'has-error' : ''}}">
+                            <label for="precio_venta" class="col-md-3">Precio Venta</label>
+
+                            <div class="col-md-12">
+                                <input id="precio_venta" type="number" min="0.00" step="0.01" class="form-control" name="precio_venta" value="{{ old('precio_venta') }}">                              
+                                {!! $errors->first('precio_venta','<span class="help-block">:message</span>') !!}
+                            </div>
+                        </div>
                        
                         <div class="form-group">
                             <div class="col-md-6">

@@ -15,7 +15,7 @@
     </div>
 
     <div class="row">
-        <div class="col-xs-7">
+        <div class="col-xs-5">
             <input id="producto_id" class="form-control" type="hidden" value="{producto_id}"/>
             <input id="product" class="form-control" type="text" placeholder="Nombre del producto"/>
         </div>
@@ -25,7 +25,13 @@
         <div class="col-xs-2">
             <div class="input-group">
                 <span class="input-group-addon" id="basic-addon1">S/.</span>
-                <input id="price" class="form-control" type="text" placeholder="Precio" value="{precio_costo}" readonly/>
+                <input id="price_c" class="form-control" type="text" placeholder="Precio_c" value="{precio_costo}" readonly/>
+            </div>
+        </div>
+        <div class="col-xs-2">
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">S/.</span>
+                <input id="price_v" class="form-control" type="text" placeholder="Precio_v" value="{precio_venta}" readonly/>
             </div>
         </div>
         <div class="col-xs-1">
@@ -44,6 +50,7 @@
             <th>Producto</th>
             <th class="text-right">Cantidad</th>
             <th class="text-right">P.U</th>
+            <th class="text-right">P.V</th>
             <th class="text-right">Total</th>
         </tr>
         </thead>
@@ -55,20 +62,21 @@
             <td>{nombre}</td>
             <td class="text-right">{cantidad}</td>
             <td class="text-right">$ {precio_unitario.toFixed(2)}</td>
+            <td class="text-right">$ {precio_venta.toFixed(2)}</td>
             <td class="text-right">$ {total.toFixed(2)}</td>
         </tr>
         </tbody>
         <tfoot>
         <tr>
-            <td colspan="4" class="text-right"><b>IVA</b></td>
+            <td colspan="5" class="text-right"><b>IVA</b></td>
             <td class="text-right">$ {iva.toFixed(2)}</td>
         </tr>
         <tr>
-            <td colspan="4" class="text-right"><b>Sub Total</b></td>
+            <td colspan="5" class="text-right"><b>Sub Total</b></td>
             <td class="text-right">$ {subtotal.toFixed(2)}</td>
         </tr>
         <tr>
-            <td colspan="4" class="text-right"><b>Total</b></td>
+            <td colspan="5" class="text-right"><b>Total</b></td>
             <td class="text-right">$ {total.toFixed(2)}</td>
         </tr>
         </tfoot>
@@ -106,15 +114,17 @@
                 id: parseFloat($("#producto_id").val()),
                 nombre: $("#product").val(),
                 cantidad:  parseFloat($("#quantity").val()),
-                precio_unitario:  parseFloat($("#price").val()),
-                total:  parseFloat($("#price").val() * $("#quantity").val())
+                precio_unitario:  parseFloat($("#price_c").val()),
+                precio_venta:  parseFloat($("#price_v").val()),
+                total:  parseFloat($("#price_v").val() * $("#quantity").val())
             });
 
             console.log(self.detail)
             $("#producto_id").val(0);
             $("#product").val('');
             $("#quantity").val('');
-            $("#price").val('');
+            $("#price_c").val('');
+            $("#price_v").val('');
 
             __calculate();
         }
@@ -186,6 +196,7 @@
                         var e = product.getSelectedItemData();
                         self.producto_id = e.id;
                         self.precio_costo = e.precio_costo;
+                        self.precio_venta = e.precio_venta;
                         
                         self.update();
                     }

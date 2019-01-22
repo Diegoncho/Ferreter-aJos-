@@ -58,9 +58,9 @@
                     <th>#</th>
                     <th class="col-md-2">Nombre</th>
                     <th class="col-md-2">Marca</th>
-                    <th class="col-md-2">Categoria</th>
-                    <th class="col-md-1">Cantidad</th>
+                    <th>Cantidad</th>
                     <th class="col-md-2">Precio Costo</th>
+                    <th class="col-md-2">Precio Venta</th>
                     <th>Acción</th>
                 </tr>
             </thead>
@@ -71,9 +71,9 @@
                     <td>{{ $row->id }}</td>
                     <td>{{ $row->nombre }}</td>
                     <td>{{ $row->marca }}</td>
-                    <td>{{ $row->categoria }}</td>
                     <td>{{ $row->cantidad }}</td>
                     <td>${{ $row->precio_costo }}</td>
+                    <td>${{ $row->precio_venta }}</td>
                     <td>
                         <a href="{{ route('productoView', $row->id) }}" class="btn btn-info"><span class="icon-visibility"></span></a>
                         <a href="{{ route('productoEdit', $row->id) }}" class="btn btn-warning">Editar</a>

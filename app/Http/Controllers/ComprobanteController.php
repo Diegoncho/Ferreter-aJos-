@@ -71,10 +71,11 @@ class ComprobanteController extends Controller
         ];
 
         foreach($request->input('detail') as $d){
-            $data->detail[] = (object)[
+            $data->detail[] = (object)[ 
                 'producto_id' => $d['id'],
                 'cantidad' => $d['cantidad'],
                 'precio_unitario' => $d['precio_unitario'],
+                'precio_venta' => $d['precio_venta'],
                 'total' => $d['total']
             ];
 
