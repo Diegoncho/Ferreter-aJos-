@@ -87,12 +87,10 @@ class ComprobanteController extends Controller
                     $res = true;
                 }
             }
-            
 
             else{
                 $res = false;
             }
-
             
             if($res == true){
                 $Productos->save();
@@ -105,9 +103,10 @@ class ComprobanteController extends Controller
 
         }
 
-        if($res== true){
+        if($res == true){
             return $this->_comprobanteRepo->save($data);
         }
+
     }
 
     public function findClient(Request $request){
