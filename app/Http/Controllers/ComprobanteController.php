@@ -81,10 +81,16 @@ class ComprobanteController extends Controller
 
             $Productos = Productos::findOrFail($d['id']);
 
-            $Productos->cantidad = $Productos->cantidad - $d['cantidad'];
-
             if($Productos->cantidad > 0){
-                $res = true;
+                if($d['cantidad'] <= $Productos->cantidad){
+                    $Productos->cantidad = $Productos->cantidad - $d['cantidad'];
+                    $res = true;
+                }
+            }
+            
+
+            else{
+                $res = false;
             }
 
             
