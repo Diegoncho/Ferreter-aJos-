@@ -87,6 +87,10 @@ class ComprobanteController extends Controller
                     $Productos->cantidad = $Productos->cantidad - $d['cantidad'];
                     $res = true;
                 }
+
+                else{
+                    $res = false;
+                }
             }
 
             else{
