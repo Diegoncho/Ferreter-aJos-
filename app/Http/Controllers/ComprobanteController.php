@@ -81,32 +81,27 @@ class ComprobanteController extends Controller
 
             $Productos = Productos::findOrFail($d['id']);
 
-            if($Productos->cantidad > 0){
-                if($d['cantidad'] <= $Productos->cantidad){
-                    $res = true;
+            $Productos->cantidad = $Productos->cantidad - $d['cantidad'];
 
-                    $Productos->cantidad = $Productos->cantidad - $d['cantidad'];
-                    $Productos->save();  
-                }
+            if($Productos->cantidad > 0){
+                $res = true;
+            }
+
+            
+            if($res == true){
+                \Session::flash('message-add', '¡Registro exitoso!');
+                $Productos->save();
             }
 
             else{
-                $res = false;
+                return $this->_comprobanteRepo->save('');
             }
-               
+
         }
 
-        if($res == true){
-
-            \Session::flash('message-add', '¡Registro exitoso!');
-
+        if($res== true){
             return $this->_comprobanteRepo->save($data);
         }
-
-        else{
-            return $this->_comprobanteRepo->save('');
-        }
-
     }
 
     public function findClient(Request $request){

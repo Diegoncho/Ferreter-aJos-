@@ -21,6 +21,12 @@
                     </div>
                 @endif 
 
+                @if (Session::has('message-error'))
+                    <div class="alert alert-success">
+                        <i class="icon-check_circle"></i> {{ Session::get('message-error') }}
+                    </div>
+                @endif
+
                 <div class="panel-body">
 
                 <div class="flexbox md-5">
