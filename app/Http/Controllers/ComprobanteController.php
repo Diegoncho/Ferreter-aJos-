@@ -112,7 +112,7 @@ class ComprobanteController extends Controller
             foreach($request->input('detail') as $p){
 
                 $Productos = Productos::findOrFail($p['id']);
-                $Productos->cantidad = $Productos->cantidad - $d['cantidad'];
+                $Productos->cantidad = $Productos->cantidad - $p['cantidad'];
                 
                 $Productos->save();
             }
