@@ -61,6 +61,7 @@ class ComprobanteController extends Controller
     public function post(Request $request){
 
         $res = false;
+       
 
         $data = (object)[
             'iva' => $request->input('iva'),
@@ -93,7 +94,6 @@ class ComprobanteController extends Controller
             }
             
             if($res == true){
-                $Productos->save();
                 \Session::flash('message-add', '¡Registro exitoso!');
             }
 
@@ -103,7 +103,16 @@ class ComprobanteController extends Controller
 
         }
 
+
         if($res == true){
+            foreach($request->input('detail') as $p){
+
+                $Productos = Productos::findOrFail($p['id']);
+                $Productos->cantidad = $Productos->cantidad - $d['cantidad'];
+                
+                $Productos->save();
+            }
+            
             return $this->_comprobanteRepo->save($data);
         }
 
