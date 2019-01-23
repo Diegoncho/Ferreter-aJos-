@@ -95,8 +95,8 @@ class ComprobanteController extends Controller
 
             
             if($res == true){
-                \Session::flash('message-add', '¡Registro exitoso!');
                 $Productos->save();
+                \Session::flash('message-add', '¡Registro exitoso!');
             }
 
             else{
