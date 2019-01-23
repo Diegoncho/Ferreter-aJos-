@@ -154,8 +154,7 @@
 
             self.subtotal = total;
 
-            self.ivaCal = parseFloat(total / 1.18);
-            self.iva = parseFloat(total - self.ivaCal);
+            self.iva = parseFloat(total * 0.13);
 
             self.total = parseFloat(total + self.iva);
         }
